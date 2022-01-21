@@ -11,7 +11,8 @@
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "helmet": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
