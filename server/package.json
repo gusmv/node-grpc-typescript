@@ -7,15 +7,20 @@
   "license": "MIT",
   "scripts": {
     "start": "node .",
-    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "grpc:types": "node scripts/grpc.js"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.5.3",
+    "@grpc/proto-loader": "^0.6.9",
     "@prisma/client": "^3.8.1",
     "celebrate": "^15.0.0",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
-    "helmet": "^5.0.1"
+    "helmet": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
